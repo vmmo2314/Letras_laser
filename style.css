@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: #202020;
+}
+
+canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.lowerRight {
+    margin: 2px;
+    font-family: serif;
+    font-size: large;
+    color: #FF8000;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+    canvas {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .lowerRight {
+        margin: 2px;
+        font-family: serif;
+        font-size: large;
+        color: #FF8000;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+    
+}
