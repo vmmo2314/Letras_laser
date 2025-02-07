@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible", content="IE=Edge">
-    <meta name="viewport" content="width=devide-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <title>HTML</title>
-
-    <link rel="stylesheet" href="style.css"></link>
+    <title>Grabado Láser</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <canvas id="canvas2"></canvas>
+
+    <header>
+        <h1>Servicio de Grabado Láser</h1>
+        <p>Alta precisión y detalles inigualables</p>
+    </header>
+
+    <section id="laser-section">
+        <div class="laser-container">
+            <canvas id="canvas"></canvas>
+            <canvas id="canvas2"></canvas>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="image1.jpg" alt="Ejemplo de grabado 1">
+                <img src="image2.jpg" alt="Ejemplo de grabado 2">
+                <img src="image3.jpg" alt="Ejemplo de grabado 3">
+            </div>
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+        </div>
+    </section>
+
     <script src="main.js"></script>
 </body>
 </html>

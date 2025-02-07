@@ -1,6 +1,50 @@
 body {
     margin: 0;
     background-color: #202020;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #181818;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+section {
+    margin: 50px auto;
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.laser-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Ajustamos la altura para coincidir con el canvas */
+    margin-bottom: 40px; /* Espacio para el contenido siguiente */
+}
+
+/* Para el contenido debajo de la animación */
+.laser-info {
+    padding: 20px;
+    margin-top: 20px;
 }
 
 canvas {
@@ -9,35 +53,38 @@ canvas {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
+    max-width: 100%;
 }
 
-.lowerRight {
-    margin: 2px;
-    font-family: serif;
-    font-size: large;
-    color: #FF8000;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+.carousel {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-@media screen and (max-width: 900px) {
-    canvas {
-    width: 300px;
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+button.prev, button.next {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    }
-
-    .lowerRight {
-        margin: 2px;
-        font-family: serif;
-        font-size: large;
-        color: #FF8000;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-    }
-    
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
 }
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
